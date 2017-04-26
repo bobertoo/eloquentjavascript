@@ -22,9 +22,13 @@ console.log(isEven(75));
 console.log(isEven(-1));
 
 // Bean Counting
-function countBs(string) {
-  return countChar(string, 'B');
+function countSomething(character) {
+  return function(string) {
+    return countChar(string, character);
+  };
 }
+
+var countBs = countSomething('B');
 
 console.log(countBs('ABBY'));
 console.log(countBs('VINNY'));
